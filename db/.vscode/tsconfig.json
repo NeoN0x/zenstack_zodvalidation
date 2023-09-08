@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "moduleResolution": "node",
+    "allowJs": true,
+    "outDir": "dist"
+  },
+}

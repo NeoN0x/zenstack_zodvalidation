@@ -1,0 +1,28 @@
+{
+  "name": "@zentest/db",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dbdev": "pnpm zenstack generate && pnpm prisma db push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@types/node": "^20.5.9",
+    "decimal.js": "^10.4.3",
+    "mmdc": "^0.0.1",
+    "prisma": "5.2.0",
+    "prisma-erd-generator": "^1.11.1",
+    "ts-node": "^10.9.1",
+    "zenstack": "1.0.0-beta.21"
+  },
+  "dependencies": {
+    "@prisma/client": "5.2.0",
+    "@zenstackhq/runtime": "1.0.0-beta.21",
+    "zod": "^3.22.2"
+  }
+}

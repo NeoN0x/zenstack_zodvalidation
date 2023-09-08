@@ -1,0 +1,32 @@
+// This is the ZenStack schema definitino.
+// Documentation: https://zenstack.dev/#/modeling-your-app.
+
+datasource db {
+    provider = 'mysql'
+    url = env('DATABASE_URL')
+}
+
+generator client {
+    provider = 'prisma-client-js'
+    output = "../.prisma/client"
+}
+
+plugin zod {
+    provider = '@core/zod'
+    output = 'zod'
+    // modelOnly = true
+    compile = false
+}
+
+abstract model Base {
+    id String @db.Char(24) @id @default(cuid())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt()
+}
+
+
+model SimpleItem extends Base {
+    name String @length(3, 5)
+
+    @@allow('all', true)
+}
